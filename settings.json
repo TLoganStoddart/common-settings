@@ -141,6 +141,17 @@
             "commands": [
                 "workbench.action.gotoSymbol",
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "%"
+            ],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag"
+                }
+            ]
         }
     ],
     "vim.sneak": true,
