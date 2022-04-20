@@ -13,6 +13,10 @@ set incsearch
 set surround
 set easymotion
 set multiple-cursors
+set relativenumber
+set number
+set ideajoin
+set idearefactormode=keep
 
 " Set <leader> to <space>
 let mapleader = " "
@@ -49,3 +53,27 @@ map K 5k
 
 map gh <Action>(ShowErrorDescription)
 " Find more examples here: https://jb.gg/share-ideavimrc
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+nnoremap <leader>c :action CommentByLineComment<CR>
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+nnoremap <leader>s :write<CR>
+nnoremap <c-x> :action HideAllWindows<CR>
